@@ -27,7 +27,8 @@ export class ZoneListComponent implements OnInit {
           this.zoneList[i].category === null ||
           !this.zoneList[i].category ||
           this.zoneList[i].level[0] === this.zoneList[i].level[1] ||
-          this.zoneList[i].territory === "PvP"
+          this.zoneList[i].territory === "PvP" ||
+          this.zoneList[i].name === "REUSE"
         ) {
           this.zoneList.splice(i, 1);
         }
