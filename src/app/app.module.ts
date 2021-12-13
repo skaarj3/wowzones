@@ -10,6 +10,7 @@ import { ZoneListComponent } from './components/zone-list/zone-list.component';
 import { ZoneComponent } from './components/zone/zone.component';
 import { LikedComponent } from './components/liked/liked.component';
 import { AboutComponent } from './components/about/about.component';
+import { FactionComponent } from './components/faction/faction.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { AboutComponent } from './components/about/about.component';
     ZoneListComponent,
     ZoneComponent,
     LikedComponent,
-    AboutComponent
+    AboutComponent,
+    FactionComponent
   ],
   imports: [
     BrowserModule,

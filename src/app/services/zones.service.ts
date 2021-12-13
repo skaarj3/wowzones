@@ -66,6 +66,6 @@ export class ZonesService {
   //métodos para manejar la información. Aquí producimos los datos del http
   //Esto devuelve una instancia de un observable. 
   getZoneList() {
-    return this.http.get(this.url);
+    return this.http.get(this.url);//.pipe -> en el pipe meto lo que quiero hacer con el url
   }
 }
