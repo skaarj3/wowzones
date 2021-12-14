@@ -11,6 +11,7 @@ import { ZoneComponent } from './components/zone/zone.component';
 import { LikedComponent } from './components/liked/liked.component';
 import { AboutComponent } from './components/about/about.component';
 import { FactionComponent } from './components/faction/faction.component';
+import { MainComponent } from './components/main/main.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FactionComponent } from './components/faction/faction.component';
     ZoneComponent,
     LikedComponent,
     AboutComponent,
-    FactionComponent
+    FactionComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,

@@ -2,8 +2,8 @@
   <div class="card-body">
     <h5 class="card-title text-danger bg-secondary" style="--bs-bg-opacity: .3;">{{zone.name}}</h5>
     <p class="card-text bg-danger" style="--bs-bg-opacity: .5;" *ngIf="isRaid(zone.category)">Zone cateogory: {{zone.category}}</p>
-    <p class="card-text bg-primary bg-gradient"  style="--bs-bg-opacity: .5;" *ngIf="isDungeon(zone.category)">Zone cateogory: {{zone.category}}</p>
-    <p class="card-text bg-success bg-gradient" style="--bs-bg-opacity: .5;" *ngIf="isOpenWorld(zone.category)">Zone cateogory: {{zone.category}}</p>
+    <p class="card-text bg-primary bg-gradient"  style="--bs-bg-opacity: .5;" *ngIf="isDungeon(zone.category)">Zone category: {{zone.category}}</p>
+    <p class="card-text bg-success bg-gradient" style="--bs-bg-opacity: .5;" *ngIf="isOpenWorld(zone.category)">Zone category: {{zone.category}}</p>
     <p class="card-text">Zone level: {{zone.level}}</p>
     <p class="card-text">Zone territory: {{zone.territory}}</p>
   </div>

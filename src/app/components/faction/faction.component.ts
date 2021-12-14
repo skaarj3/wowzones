@@ -7,7 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FactionComponent implements OnInit {
 
+  faction: any;
+
   constructor() { }
+  
+  chooseFaction(faction:any){
+    console.log("Has elegido a " + faction);
+    return this.faction;
+  }
 
   ngOnInit(): void {
   }
