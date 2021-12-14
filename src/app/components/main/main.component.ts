@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { AppRoutingModule } from 'src/app/app-routing.module';
 
 @Component({
@@ -7,6 +7,8 @@ import { AppRoutingModule } from 'src/app/app-routing.module';
   styleUrls: ['./main.component.css']
 })
 export class MainComponent implements OnInit {
+
+  @Input() faction:any;
 
   constructor() { }
 

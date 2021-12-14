@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 
 
 @Component({
@@ -8,12 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FactionComponent implements OnInit {
 
+  
   faction: any;
 
   constructor() { }
   
   chooseFaction(faction:any){
-    console.log("Has elegido a " + faction);
+    //console.log("Has elegido a " + faction);
+    this.faction = faction;
+    localStorage.setItem('faction', JSON.stringify(this.faction));
     return this.faction;
   }
 
