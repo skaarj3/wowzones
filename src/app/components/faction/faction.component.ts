@@ -1,4 +1,5 @@
 import { Component, OnInit, Output } from '@angular/core';
+import { FactionService } from 'src/app/services/faction.service';
 
 
 @Component({
@@ -11,13 +12,17 @@ export class FactionComponent implements OnInit {
   
   faction: any;
 
-  constructor() { }
+  constructor(private factionService: FactionService) {  }
   
   chooseFaction(faction:any){
-    //console.log("Has elegido a " + faction);
-    this.faction = faction;
-    localStorage.setItem('faction', JSON.stringify(this.faction));
-    return this.faction;
+    console.log("Has elegido a " + faction);
+    this.factionService = faction;
+    //localStorage.setItem('faction', JSON.stringify(this.faction));
+    //return this.faction;
+  }
+
+  getFaction(factionService: FactionService) {
+
   }
 
   ngOnInit(): void {

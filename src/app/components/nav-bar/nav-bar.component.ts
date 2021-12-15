@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { FactionService } from 'src/app/services/faction.service';
 
 @Component({
   selector: 'app-nav-bar',
@@ -7,8 +8,24 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class NavBarComponent implements OnInit {
 
-  @Input() faction:any;
-  constructor() { }
+  faction: any;
+
+  constructor(private factionService: FactionService) {
+    this.faction = this.factionService.getFaction();
+   }
+
+
+  getFaction(){
+    this.faction = this.factionService.getFaction();
+  }
+
+  isHorde(faction:any){
+    return faction === "Horde";
+  }
+
+  isAlliance(faction:any){
+    return faction === "Alliance";
+  }
 
   ngOnInit(): void {
   }
