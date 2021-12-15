@@ -8,16 +8,14 @@ import { FactionService } from 'src/app/services/faction.service';
 })
 export class NavBarComponent implements OnInit {
 
-  faction: any;
+  public faction: any;
 
-  constructor(private factionService: FactionService) {
+  constructor(private factionService: FactionService) { }
+
+
+/*   getFaction(){
     this.faction = this.factionService.getFaction();
-   }
-
-
-  getFaction(){
-    this.faction = this.factionService.getFaction();
-  }
+  } */
 
   isHorde(faction:any){
     return faction === "Horde";
@@ -28,6 +26,9 @@ export class NavBarComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.factionService.varFaction.subscribe(data => {console.log(`Recibiendo datos...`,data);
+    this.faction = data;
+  })
   }
 
 }

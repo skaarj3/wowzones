@@ -16,7 +16,7 @@ export class FactionComponent implements OnInit {
   
   chooseFaction(faction:any){
     console.log("Has elegido a " + faction);
-    this.factionService = faction;
+    this.factionService.varFaction.emit({data:this.faction});
     //localStorage.setItem('faction', JSON.stringify(this.faction));
     //return this.faction;
   }
