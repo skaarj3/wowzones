@@ -1,34 +1,26 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FactionService } from 'src/app/services/faction.service';
 
 @Component({
   selector: 'app-nav-bar',
   templateUrl: './nav-bar.component.html',
-  styleUrls: ['./nav-bar.component.css']
+  styleUrls: ['./nav-bar.component.css'],
 })
-export class NavBarComponent implements OnInit {
 
+export class NavBarComponent implements OnInit {
+  constructor(public factionService: FactionService) {}
   public faction: any;
 
-  constructor(private factionService: FactionService) { }
+/*   isHorde(faction: any) {
+    return (faction = 'Horde');
+  }
 
-
-/*   getFaction(){
-    this.faction = this.factionService.getFaction();
+  isAlliance(faction: any) {
+    return (faction = 'Alliance');
   } */
 
-  isHorde(faction:any){
-    return faction === "Horde";
-  }
-
-  isAlliance(faction:any){
-    return faction === "Alliance";
-  }
-
   ngOnInit(): void {
-    this.factionService.varFaction.subscribe(data => {console.log(`Recibiendo datos...`,data);
-    this.faction = data;
-  })
+    this.faction = this.factionService.faction;
+      //console.log('Recibiendo data en NavBar...', this.faction);
   }
-
 }

@@ -28,6 +28,6 @@ export class LikedComponent implements OnInit {
   ngOnInit(): void {}
 
   goBack(): void {
-    this.router.navigate(['..']);
+    this.router.navigate(['main']);
   }
 }
